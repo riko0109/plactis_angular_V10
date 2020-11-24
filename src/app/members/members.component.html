@@ -1,7 +1,10 @@
-<h2>{{ member.name }}</h2>
-<div>
-    <span>id:</span>{{ member.id }}
-</div>
-<div>
-    <span>name:</span>{{ member.name }}
-</div>
+<h2>社員一覧</h2>
+<ul class="members">
+    <!--*ngForでコレクションプロパティを繰り返し表示-->
+    <!--[class.selected]で選択しているli要素がselectedMemberだったらclass属性にselectedを追加-->
+    <li *ngFor="let member of members" (click)="onSelect(member)" [class.selected]="member === selectedMember">
+        <span class="badge">{{ member.id }}</span> {{ member.name }}
+    </li>
+</ul>
+
+<app-member-detail [member]="selectedMember"></app-member-detail>
