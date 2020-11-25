@@ -2,9 +2,10 @@
 <ul class="members">
     <!--*ngForでコレクションプロパティを繰り返し表示-->
     <!--[class.selected]で選択しているli要素がselectedMemberだったらclass属性にselectedを追加-->
-    <li *ngFor="let member of members" (click)="onSelect(member)" [class.selected]="member === selectedMember">
-        <span class="badge">{{ member.id }}</span> {{ member.name }}
+    <li *ngFor="let member of members">
+        <a routerLink="/detail/{{ member.id }}">
+            <span class="badge">{{ member.id }}</span> {{ member.name }}
+        </a>
     </li>
 </ul>
 
-<app-member-detail [member]="selectedMember"></app-member-detail>
