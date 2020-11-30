@@ -10,6 +10,7 @@ import { MembersComponent } from './view/members/members.component';
 import { MemberDetailComponent } from './view/member-detail/member-detail.component';
 import { MessagesComponent } from './view/messages/messages.component';
 import { DashboardComponent } from './view/dashboard/dashboard.component';
+import { MemberSearchComponent } from './view/member-search/member-search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './view/dashboard/dashboard.component';
     MembersComponent,
     MemberDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    MemberSearchComponent
   ],
   imports: [
     BrowserModule,
